@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div class="container-fluid"> <!-- CoRoCoCo -->
+      <div class="row justify-content-md-center">
+          <div class="col-10">
+              <h1>Week 12 (13) Coding Assignment</h1>
+              <p><i>This form is repurposed from the Week 10 Coding Assignment</i></p>
+              <p><i>I'm adding a json file for the players database API.</i></p>
+            </div>
+            <div class="col-8">
+              <!-- Form Row -->
+              <br>
+              <h2>Add A New Player to the Subs List</h2>
+              <form class="text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+                <div class="mb-3 row align-items-center ">
+                    <div class="col-auto">
+                        <label for="name" class="form-label">Your Name</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" class="form-control"
+                        id="name"
+                        aria-label="First Last" autocomplete="name">
+                        <div id="name" class="form-text fst-italic">
+                            <span class="badge text-bg-primary">
+                                Please include your first and last name.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <br>
+        
+                <div class="mb-3 row align-items-center">
+                    <div class="col-auto">
+                        <label for="position" class="form-label">Position</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" class="form-control"
+                        id="position"
+                        aria-label="hockey position">
+                        <div id="position" class="form-text fst-italic">
+                            <span class="badge text-bg-primary">
+                                List all positions you play, separated by commas.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <br>
+        
+                <!--I added html to validate the phone number input. I used the code from the first week and added it to the input element.-->
+                  <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                      <label for="name" class="col-form-label">Your Phone Number</label>
+                    </div>
+                    <div class="col-auto">
+                        <input class="form-control" 
+                        type="text" 
+                        id="phone" 
+                        aria-label="(area) phone number"
+                        autocomplete="phone"
+                        type="tel"
+                        name="phone"
+                        placeholder="XXX-XXX-XXXX"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        required/>
+                    </div>
+                </div>
+                <button id="addPlayerButton" type="submit" class="btn btn-success m-3">Add New Player</button>
+            </form>
+          </div>
+
+          <div class="col-10">
+            <!-- Table Row -->
+              <br>
+              <h2>Available Hockey Players</h2>
+              <button id="updatePlayersButton" type="submit" class="btn btn-secondary m-3">Update Players List</button>
+              <button id="removePlayerButton" type="submit" class="btn btn-danger m-3">Remove a Player</button>
+              <table class="table" id="roster">
+                    <tbody>
+                     <!--Rows to be added here-->
+                    </tbody>
+              </table>   
+          </div>
+      </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
